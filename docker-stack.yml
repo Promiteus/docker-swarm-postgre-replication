@@ -17,7 +17,7 @@ services:
       options:
         max-size: "10m"
     ports:
-      - 8080
+      - 8089
     networks:
       - replica-net
     deploy:
