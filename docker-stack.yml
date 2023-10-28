@@ -35,7 +35,7 @@ services:
 
   # Master БД
   postgres_master:
-    image: bitnami/postgresql:15.4.0
+    image: postgresql:15
     environment:
       - POSTGRESQL_REPLICATION_MODE=master
       - POSTGRESQL_REPLICATION_USER=sa2
@@ -56,7 +56,7 @@ services:
 
   # Slave БД
   postgres_replica:
-    image: bitnami/postgresql:15.4.0
+    image: postgresql:15
     environment:
       - POSTGRESQL_REPLICATION_MODE=slave
       - POSTGRESQL_REPLICATION_USER=sa2
