@@ -2,8 +2,8 @@
 - Установить multipass (**оркестратор виртуальных машин**): https://snapcraft.io/install/multipass/ubuntu  
 - Создать две виртуальные машины командами:  
 
-> multipass launch -c 2 -m 2G -d 10G -n manager  
-> multipass launch -c 2 -m 2G -d 10G -n vm-1  
+> * multipass launch -c 2 -m 2G -d 10G -n manager  
+> * multipass launch -c 2 -m 2G -d 10G -n vm-1  
 
 - Проверить, что машины созданы следующей командой:
 
@@ -60,4 +60,16 @@ ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS
 vsh48tutvmni5cfgdmihyf231 *   manager    Ready     Active         Leader           24.0.7  
 bacigz8sw60ksaw7rvmdsmsbm     vm-1       Ready     Active                          24.0.7  
 
+- Снова перейти на manager машину, если терминал был с ней закрыт закрыт:
+
+> multipass shell manager  
+
+- Далее, в текущем или ином каталоге вызвать команду клонирования проекта:  
+
+> * git clone git@github.com:Promiteus/docker-swarm-postgre-replication.git   
+> * cd docker-swarm-postgre-replication
+
+- Вызвать команду развертывания конфигурации docker-stack.yml:  
+
+> docker stack deploy -c docker-stack.yml rep  
 
