@@ -35,7 +35,7 @@ services:
 
   # Master БД
   postgres_master:
-    image: postgres:15
+    image: bitnami/postgresql:15.4.0
     environment:
       POSTGRES_MODE: master
       POSTGRES_USER: sa
@@ -55,7 +55,7 @@ services:
 
   # Slave БД
   postgres_replica:
-    image: postgres:15
+    image: bitnami/postgresql:15.4.0
     environment:
       POSTGRES_MODE: slave
       #POSTGRES_USER: sa
