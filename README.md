@@ -80,7 +80,7 @@ bacigz8sw60ksaw7rvmdsmsbm     vm-1       Ready     Active                       
 >  multipass info manager  
 
 - После, по полученому IP адерсу зайти в браузер и убедиться, как приложение visualizer отображает сервисы по вритуальным машинам. Перейти http://10.200.64.72:8080/  
-У вас будт свлой IP.  
+У вас будт свой IP.  
   
 - Чтобы войти в панель управлния СУБД вставьте в браузерную строку ссылку: http://10.200.64.72:8089/?pgsql=postgres_master&username=sa&db=docker_replica&ns=public  
 
