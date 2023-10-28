@@ -46,4 +46,18 @@
 
 Завершить работу класетра и удалить его можно так:  ``docker swarm leave --force ``  
 
+- Зайти на машину vm-1 запустить там результат команды ``docker swarm init``. Будет что-то примерно такое:  
+
+> docker swarm join --token SWMTKN-1-5dvwq493pyjgeqk9hd9af16uoiqwjnwzmu1gc709ib2t2180q0-c7ksynsfj1zg05w56lph3wlju 10.200.64.72:2377  
+
+Теперь машина manager является главным сервером, vm-1 - рабочим, то есть manager и worker. На manager можно увидеть созданные узлы (nodes):  
+
+> docker node ls  
+
+Ответ (пример):  
+ubuntu@manager:~$ docker node ls  
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION  
+vsh48tutvmni5cfgdmihyf231 *   manager    Ready     Active         Leader           24.0.7  
+bacigz8sw60ksaw7rvmdsmsbm     vm-1       Ready     Active                          24.0.7  
+
 
