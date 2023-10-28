@@ -23,7 +23,7 @@
 
 > multipass shell manager  
 
-И установить на нем Docker (https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04-ru). Тоже самое нужно сделать и на машине vm-1.
+И установить на нее Docker (https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04-ru). Тоже самое нужно сделать и на машине vm-1.
 
 - Сменить пароль ubuntu пользователя, например на '123' (без кавычек). Имя пользователя виртуального сервера здесь  **ubuntu**:  
 
