@@ -91,5 +91,9 @@ bacigz8sw60ksaw7rvmdsmsbm     vm-1       Ready     Active                       
 Проверим, что таблицы и данные в них появились по ссылке: http://10.200.64.72:8089/?pgsql=postgres_master&username=sa&db=docker_replica&ns=public  
 Проверить такие же данные в репликах: http://10.200.64.72:8089/?pgsql=postgres_replica&username=sa&db=docker_replica&ns=public  
 
-***Важно! На сервер репликации лучше заходить по master логину и паролю - у него максимальные права!***
+***Важно! На сервер репликации лучше заходить по master логину и паролю - у него максимальные права!***  
+
+После экспериментов остановить машины **manager** и **vm-1**:  
+
+> multipass stop manager vm-1
 
