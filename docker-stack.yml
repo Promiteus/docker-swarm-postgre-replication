@@ -58,16 +58,14 @@ services:
     image: bitnami/postgresql:15.4.0
     environment:
       POSTGRES_MODE: slave
-      #POSTGRES_USER: sa
-      #POSTGRES_PASSWORD: 1234
-      #POSTGRES_DB: docker_replica
-      #POSTGRES_MASTER_HOST: postgres_master
-    links:
-      - master:postgres_master
-    #volumes:
-    #  - postgres-data:/var/lib/postgresql/data
-    #networks:
-    #  - replica-net
+      POSTGRES_USER: sa
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: docker_replica
+      POSTGRES_MASTER_HOST: postgres_master
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - replica-net
     deploy:
       replicas: 2
       placement:
