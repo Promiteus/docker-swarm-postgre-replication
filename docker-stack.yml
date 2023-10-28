@@ -41,6 +41,8 @@ services:
       POSTGRES_USER: sa
       POSTGRES_PASSWORD: 1234
       POSTGRES_DB: docker_replica
+      POSTGRES_REPLICATION_USER: sa2
+      POSTGRES_REPLICATION_PASSWORD: 1234
     volumes:
       - postgres-data:/var/lib/postgresql/data
       - ./scripts/cities/ru:/etc/cities/ru
