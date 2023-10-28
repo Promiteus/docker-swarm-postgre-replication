@@ -35,7 +35,7 @@ services:
 
   # Master БД
   postgres_master:
-    image: postgresql:15
+    image: postgres:15-bullseye
     environment:
       - POSTGRESQL_REPLICATION_MODE=master
       - POSTGRESQL_REPLICATION_USER=sa2
@@ -56,7 +56,7 @@ services:
 
   # Slave БД
   postgres_replica:
-    image: postgresql:15
+    image: postgres:15-bullseye
     environment:
       - POSTGRESQL_REPLICATION_MODE=slave
       - POSTGRESQL_REPLICATION_USER=sa2
