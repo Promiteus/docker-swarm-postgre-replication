@@ -84,7 +84,7 @@ bacigz8sw60ksaw7rvmdsmsbm     vm-1       Ready     Active                       
   
 - Чтобы войти в панель управлния СУБД вставьте в браузерную строку ссылку: http://10.200.64.72:8089/?pgsql=postgres_master&username=sa&db=docker_replica&ns=public  
 
-- А теперь загрузим страны и города в postgres-master СУБД сервис. Делается это на manager виртуальной машине в каталоге проетка docker-swarm-postgres-replica:  
+- А теперь загрузим страны и города в postgres-master СУБД сервис. Делается это на manager виртуальной машине в каталоге проекта docker-swarm-postgres-replica:  
 
 > ./scripts/cities/prod/init-ru-db.sh  
 
