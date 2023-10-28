@@ -31,5 +31,8 @@
 
 - На машине **manager** выполните инициализацию Docker Swarm кластера:  
 
-> docker swarm init
+> docker swarm init  
+
+Завершить работу класетра и удалить его можно так:  ``docker swarm leave --force ``  
+
 
