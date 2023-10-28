@@ -82,12 +82,12 @@ bacigz8sw60ksaw7rvmdsmsbm     vm-1       Ready     Active                       
 - После, по полученому IP адерсу зайти в браузер и убедиться, как приложение visualizer отображает сервисы по вритуальным машинам. Перейти http://10.200.64.72:8080/  
 У вас будт свлой IP.  
   
-- Чтобы войти в панель управлния СУБД вставьте в браузерную строку ссылку: http://10.200.64.72:8089/?pgsql=postgres-master&username=sa&db=docker_replica&ns=public  
+- Чтобы войти в панель управлния СУБД вставьте в браузерную строку ссылку: http://10.200.64.72:8089/?pgsql=postgres_master&username=sa&db=docker_replica&ns=public  
 
 - А теперь загрузим страны и города в postgres-master СУБД сервис. Делается это на manager виртуальной машине в каталоге проетка docker-swarm-postgres-replica:  
 
 > ./scripts/cities/prod/init-ru-db.sh  
 
-Проверим, что таблицы и данные в них появились по ссылке: http://10.200.64.72:8089/?pgsql=postgres-master&username=sa&db=docker_replica&ns=public  
-Проверить такие же данные в репликах: http://10.200.64.72:8089/?pgsql=postgres-replica&username=sa&db=docker_replica&ns=public  
+Проверим, что таблицы и данные в них появились по ссылке: http://10.200.64.72:8089/?pgsql=postgres_master&username=sa&db=docker_replica&ns=public  
+Проверить такие же данные в репликах: http://10.200.64.72:8089/?pgsql=postgres_replica&username=sa&db=docker_replica&ns=public  
 
