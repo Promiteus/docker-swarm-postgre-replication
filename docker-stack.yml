@@ -2,6 +2,13 @@ version: '3'
  
 services:
 
+  viz:
+    image: dockersamples/visualizer
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    ports:
+      - "8080:8080"
+
   # Менеджер баз данных
   adminer:
     image: adminer
