@@ -29,7 +29,7 @@ services:
 
   # Master БД
   postgres-master:
-    image: postgres:15-bullseye
+    image: postgres:15
     environment:
       POSTGRES_USER: sa
       POSTGRES_PASSWORD: 1234
@@ -46,7 +46,7 @@ services:
 
   # Slave БД
   postgres-replica:
-    image: postgres:15-bullseye
+    image: postgres:15
     environment:
       POSTGRES_USER: sa
       POSTGRES_PASSWORD: 1234
