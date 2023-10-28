@@ -71,7 +71,7 @@ bacigz8sw60ksaw7rvmdsmsbm     vm-1       Ready     Active                       
 
 - Вызвать команду развертывания конфигурации docker-stack.yml:  
 
-> docker stack deploy -c docker-stack.yml rep  
+> docker stack deploy --with-registry-auth -c docker-stack.yml rep  
 
 - Если все успешно, то команда ``docker service ls`` покажет запущенные сервисы. Обычно запуск происходит не сразу, так как образы еще не были загружены на сервер.  
 
