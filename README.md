@@ -69,7 +69,7 @@ bacigz8sw60ksaw7rvmdsmsbm     vm-1       Ready     Active                       
 
 ### Запуск тестового проекта
 
-- Снова перейти на manager машину, если терминал был с ней закрыт закрыт:
+- Снова перейти на manager машину, если терминал был с ней закрыт:
 
 > multipass shell manager  
 
