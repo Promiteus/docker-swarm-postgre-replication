@@ -1,4 +1,9 @@
-### Пример репликации СУБД postgres  
+
+## Пример репликации СУБД postgre  
+Данный пример демонстрирует репликацию СУБД postgre в рамках кластера Docker Swarm на двух виртуальных машинах. Первая машина (manager) будет содержать master базу, вторая машина (vm-1) 2-е реплики (копии) master базы. Копирование из master базы виртуальной машины manager в машину vm-1, с двумя репликами postgre, происходит в реальном времени.
+
+
+### Создание виртуальных серверов
 - Установить multipass (**оркестратор виртуальных машин**): https://snapcraft.io/install/multipass/ubuntu  
 - Создать две виртуальные машины командами:  
 
@@ -40,6 +45,8 @@
 Теперь команды докера должны вызываться без прав суперпользователя **sudo**
 > docker ps
 
+### Создание кластера Docker Swarm в рамках созданных виртуальных машин
+
 - На машине **manager** выполните инициализацию Docker Swarm кластера:  
 
 > docker swarm init  
@@ -60,7 +67,9 @@ ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS
 vsh48tutvmni5cfgdmihyf231 *   manager    Ready     Active         Leader           24.0.7  
 bacigz8sw60ksaw7rvmdsmsbm     vm-1       Ready     Active                          24.0.7  
 
-- Снова перейти на manager машину, если терминал был с ней закрыт закрыт:
+### Запуск тестового проекта
+
+- Снова перейти на manager машину, если терминал был с ней закрыт:
 
 > multipass shell manager  
 
